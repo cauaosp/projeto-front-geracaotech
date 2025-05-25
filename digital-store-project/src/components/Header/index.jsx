@@ -2,13 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Logo from "../Logo";
 import { SidebarTrigger } from "../ui/sidebar";
+import CarBuy from "./CarBuy";
 import SiteNavigation from "./SiteNavigation";
 
 const Header = () => {
   return (
     <>
-      <div className="hidden md:block items-center p-8 px-14">
-        <div className="flex justify-between items-center mb-4">
+      <div className="hidden md:block items-center py-8 px-14">
+        <div className="flex justify-between items-center mb-5">
           <Logo />
           <div className="relative flex items-center">
             <Input
@@ -19,7 +20,7 @@ const Header = () => {
           </div>
           <div className="underline text-zinc-700">Cadastre-se</div>
           <Button>Entrar</Button>
-          <img src="/Carbuy.svg" alt="Carrinho de compras" />
+          <CarBuy />
         </div>
         <SiteNavigation />
       </div>
@@ -28,7 +29,7 @@ const Header = () => {
         <Logo />
         <div className="flex gap-4">
           <img src="/Search.svg" alt="Lupa" />
-          <img src="/Carbuy.svg" alt="Carrinho de compras" />
+          <CarBuy />
         </div>
       </div>
     </>
