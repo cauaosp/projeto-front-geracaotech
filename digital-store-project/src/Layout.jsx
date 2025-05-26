@@ -1,6 +1,6 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import AppSidebar from "@/components/Header/app-sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import Header from "../src/components/Header/index";
-import AppSidebar  from "@/components/Logo/app-sidebar"
 
 const Layout = ({ children }) => {
   return (
