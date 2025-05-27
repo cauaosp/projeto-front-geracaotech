@@ -1,4 +1,3 @@
-import { useLocation } from 'react-router-dom'; // or usePathname from next/navigation if using Next.js
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -7,6 +6,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { cn } from "@/lib/utils"; // Make sure you have this utility
+import { useLocation } from "react-router-dom"; // or usePathname from next/navigation if using Next.js
 
 const SiteNavigation = () => {
   const location = useLocation();
@@ -23,7 +23,7 @@ const SiteNavigation = () => {
     <Breadcrumb>
       <BreadcrumbList>
         {breadcrumbs.map((item, index) => (
-          <div key={item.href} className="flex items-center">
+          <div key={index} className="flex items-center">
             <BreadcrumbItem>
               <BreadcrumbLink
                 href={item.href}

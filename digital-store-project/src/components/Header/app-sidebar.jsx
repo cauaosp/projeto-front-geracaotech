@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
   Sidebar,
   SidebarContent,
@@ -22,11 +23,9 @@ const items = [
   },
   {
     title: "Categorias",
-    url: "#",
   },
   {
     title: "Meus Pedidos",
-    url: "#",
   },
 ];
 
@@ -43,9 +42,9 @@ const AppSidebar = () => {
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => (
+              {items.map((item, index) => (
                 <SidebarMenuItem
-                  key={item.title}
+                  key={index}
                   className={cn(
                     "text-sm transition-colors hover:text-primary font-medium",
                     currentPath === item.url
@@ -63,11 +62,12 @@ const AppSidebar = () => {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-        <div className="absolute bottom-0 bg-blue-200 w-full flex flex-col justify-center items-center">
-          <hr className="border w-40 border-red-600 mb-3"/>
-          <div className="bg-red-200 w-fit m-auto">dasdasdl</div>
-          <div className="bg-red-200 w-fit m-auto">dasdasdl</div>
-          <div className="bg-red-200 w-fit m-auto">dasdasdl</div>
+        <div className="absolute bottom-0 w-full flex flex-col justify-center items-center mb-5 gap-2">
+          <hr className="border w-3/4 border-stone-300 rounded-full" />
+          <Button className="bg-primary rounded-md w-3/4 font-medium cursor-pointer">
+            Entrar
+          </Button>
+          <div className="underline cursor-pointer">Cadastre-se</div>
         </div>
       </SidebarContent>
     </Sidebar>
