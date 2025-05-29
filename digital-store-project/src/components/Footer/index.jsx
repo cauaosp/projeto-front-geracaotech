@@ -12,7 +12,7 @@ const Footer = ({ className }) => {
         <img src="/white-logo.svg" alt="logo branca" />
         <div className="text-white text-2xl font-medium">Digital Store</div>
       </div>
-      <div className="w-5/6">
+      <div className="w-5/6 text-sm -mt-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore.
       </div>
@@ -24,7 +24,7 @@ const Footer = ({ className }) => {
       <div className="grid grid-cols-2">
         <div>
           <div className="font-bold">Informação</div>
-          <ul className="flex flex-col gap-1 mt-2">
+          <ul className="flex flex-col gap-1 mt-2 font-light">
             <li>Sobre Drip Store</li>
             <li>Segurança</li>
             <li>Wishlist</li>
@@ -35,7 +35,7 @@ const Footer = ({ className }) => {
         </div>
         <div>
           <div className="font-bold">Informação</div>
-          <ul className="flex flex-col gap-1 mt-2">
+          <ul className="flex flex-col gap-1 mt-2 font-light">
             <li>Camisetas</li>
             <li>Calças</li>
             <li>Bonés</li>
@@ -46,7 +46,7 @@ const Footer = ({ className }) => {
       </div>
       <div className="flex flex-col gap-2 max-md:max-w-96">
         <div className="font-bold">Contato</div>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 font-light">
           <div>
             Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE,
             60150-161
