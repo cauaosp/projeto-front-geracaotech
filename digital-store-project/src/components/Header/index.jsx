@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 import Logo from "../Logo";
 import { SidebarTrigger } from "../ui/sidebar";
 import CarBuy from "./CarBuy";
 import SiteNavigation from "./SiteNavigation";
 
-const Header = () => {
+const Header = ({ className }) => {
   return (
-    <>
+    <div className={cn("max-md:sticky max-md:top-0", className)}>
       <div className="hidden md:block items-center py-8 px-14">
         <div className="flex justify-between items-center mb-5">
           <Logo />
@@ -32,7 +33,7 @@ const Header = () => {
           <CarBuy />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,16 +1,15 @@
 import AppSidebar from "@/components/Header/app-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import Header from "../src/components/Header/index";
+import Footer from "./components/Footer";
 
 const Layout = ({ children }) => {
   return (
-    <SidebarProvider>
+    <SidebarProvider className="flex-col container h-screen">
       <AppSidebar />
-      <main className="w-full">
-        <Header />
-        {children}
-        {/* <Footer /> */}
-      </main>
+      <Header />
+      <main className="flex-1">{children}</main>
+      <Footer />
     </SidebarProvider>
   );
 };
