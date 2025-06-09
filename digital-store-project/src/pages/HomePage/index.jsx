@@ -3,26 +3,30 @@ import Section from "@/components/Section";
 const HomePage = () => {
   return (
     <div className="w-full border-8 border-purple-700">
-      <div className="text-center text-primary text-7xl bg-black p-4">Hello World!</div>
+      <div className="text-center text-primary text-7xl bg-black p-4">
+        Hello World!
+      </div>
       <Section
         title={
           <>
-            <div className="text-amber-500 text-xl">Oferta especial</div>
-            <div>Air Jordan edição de colecionador</div>
+            <div className="lg:text-primary text-amber-500 text-xl">
+              Oferta especial
+            </div>
+            <div className="lg:text-7xl">Air Jordan edição de colecionador</div>
           </>
         }
         link={{ text: "Ver oferta", href: "/productlist" }}
         image={
-          <div className="relative h-64 mb-20">
+          <div className="relative flex w-full items-center justify-center h-80 md:min-h-96 md:w-1/2">
             <img
               src="eclipse-roxa.png"
               alt="fundo da imagem do sapato"
-              className="absolute inset-0 m-auto z-10 w-80 mt-2"
+              className="absolute z-10 w-80 -mb-8 lg:w-[450px] lg:-mb-40"
             />
             <img
               src="air-jordan.png"
               alt="sapato em promocao"
-              className="absolute inset-0 m-auto z-20 w-96 -mb-1"
+              className="relative z-20 w-96 lg:w-[500px] lg:-mb-12"
             />
           </div>
         }

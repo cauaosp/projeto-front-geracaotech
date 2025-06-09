@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 const Footer = ({ className }) => {
   return (
-    <div className={cn("bg-stone-900 p-5 text-white", className)}>
+    <div className={cn("bg-stone-900 p-5 text-white mt-auto", className)}>
       <div className="flex flex-col md:flex-row gap-8 md:mx-16 border-b pb-10 mb-10">
         <div className="flex flex-col gap-8">
           <div className="flex gap-2">
