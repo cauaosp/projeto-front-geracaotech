@@ -8,7 +8,7 @@ import SiteNavigation from "./SiteNavigation";
 
 const Header = ({ className }) => {
   return (
-    <div className={cn("max-md:sticky max-md:top-0", className)}>
+    <div className={cn("max-md:sticky max-md:top-0 z-50", className)}>
       <div className="hidden md:block items-center py-8 px-14">
         <div className="flex justify-between items-center mb-5">
           <Logo />
