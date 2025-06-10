@@ -19,7 +19,6 @@ const HomePage = () => {
             src: "/tenis-horizontal.png",
           },
         ]}
-        showThumbs={true}
       />
       <div className="text-center text-primary text-7xl bg-black p-4">
         Hello World!

@@ -9,7 +9,7 @@ import {
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
-const Gallery = ({ images = [], className }) => {
+const Gallery = ({ images = [], showThumbnail, className }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrev = () => {
@@ -38,13 +38,14 @@ const Gallery = ({ images = [], className }) => {
 
   return (
     <div
-      className={cn("relative pb-10 bg-neutral-100 overflow-hidden", className)}
+      className={cn("relative pb-12 bg-neutral-100 overflow-hidden", className)}
     >
       <img
         src="/orange-dots.png"
         alt="pontinhos laranja"
         className="absolute z-10 w-44 -right-20 top-8 md:-right-8 lg:right-8"
       />
+
       <Carousel className="px-8 z-40 lg:px-20" opts={{ align: "start" }}>
         <CarouselContent
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -57,10 +58,12 @@ const Gallery = ({ images = [], className }) => {
                     <div className="lg:text-amber-500 text-primary text-xl">
                       Melhores ofertas personalizadas
                     </div>
-                    <div className="md:text-5xl lg:text-7xl text-stone-900">Queima de stoque Nike 🔥 </div>
+                    <div className="md:text-5xl lg:text-7xl text-stone-900">
+                      Queima de stoque Nike 🔥{" "}
+                    </div>
                   </>
                 }
-                link={{ text: "Ver oferta", href: "/productlist" }}
+                link={{ text: "Ver ofertas", href: "/productlist" }}
                 image={
                   <div className="flex items-center justify-center h-72 md:w-1/2">
                     <img
@@ -100,17 +103,34 @@ const Gallery = ({ images = [], className }) => {
         </CarouselNext>
       </Carousel>
 
-      <div className="flex gap-4 overflow-auto w-full justify-center absolute bottom-4">
-        {images.map((img, index) => (
-          <button
-            key={index}
-            onClick={() => goToIndex(index)}
-            className={cn(
-              "size-8 rounded-full",
-              currentIndex === index ? "bg-primary" : "bg-stone-300"
-            )}
-          ></button>
-        ))}
+      <div className="flex gap-4 overflow-auto w-full justify-center absolute bottom-8">
+        {images.map((img, index) =>
+          showThumbnail ? (
+            <button
+              key={index}
+              onClick={() => goToIndex(index)}
+              className={cn(
+                "w-28 h-24  rounded-lg flex items-center justify-center p-2",
+                currentIndex === index && "border-2 border-pink-600"
+              )}
+            >
+              <img
+                src={img.src}
+                alt="imagem do carrousel"
+                className="max-w-20"
+              />
+            </button>
+          ) : (
+            <button
+              key={index}
+              onClick={() => goToIndex(index)}
+              className={cn(
+                "size-3 rounded-full",
+                currentIndex === index ? "bg-primary" : "bg-stone-300"
+              )}
+            ></button>
+          )
+        )}
       </div>
     </div>
   );
