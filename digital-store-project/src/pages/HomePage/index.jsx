@@ -1,9 +1,27 @@
 import Gallery from "@/components/Gallery";
+import ProductList from "@/components/ProductListing";
 import Section from "@/components/Section";
+import { productsData } from "@/lib/datas";
 
 const HomePage = () => {
   return (
-    <div className="w-full border-8 border-purple-700">
+    <div className="w-full bg-neutral-100">
+      <ProductList
+        products={productsData}
+        top={
+          <div className="flex justify-between px-2 mb-4">
+            <div className="text-zinc-700 font-bold">Produtos em alta</div>
+            <a href="/productlist" className="flex items-center gap-3 text-primary">
+              <div>Ver todos</div>
+              <img
+                src="/right-purple.png"
+                alt="link para ver mais"
+                className="h-6"
+              />
+            </a>
+          </div>
+        }
+      />
       <Gallery
         images={[
           {
@@ -47,7 +65,7 @@ const HomePage = () => {
             />
           </div>
         }
-        className="py-8"
+        className="py-8 bg-white"
       >
         <div className="text-lg mb-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

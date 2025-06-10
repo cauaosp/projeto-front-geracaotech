@@ -32,10 +32,6 @@ const Gallery = ({ images = [], showThumbnail, className }) => {
     setCurrentIndex(index);
   };
 
-  // useEffect(() => {
-  //   if(currentIndex)
-  // }, [currentIndex])
-
   return (
     <div
       className={cn("relative pb-12 bg-neutral-100 overflow-hidden", className)}
