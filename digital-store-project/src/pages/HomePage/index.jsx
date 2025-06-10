@@ -1,8 +1,26 @@
+import Gallery from "@/components/Gallery";
 import Section from "@/components/Section";
 
 const HomePage = () => {
   return (
     <div className="w-full border-8 border-purple-700">
+      <Gallery
+        images={[
+          {
+            src: "/air-jordan.png",
+          },
+          {
+            src: "/red-tenis.png",
+          },
+          {
+            src: "/tenis-2.png",
+          },
+          {
+            src: "/tenis-horizontal.png",
+          },
+        ]}
+        showThumbs={true}
+      />
       <div className="text-center text-primary text-7xl bg-black p-4">
         Hello World!
       </div>
