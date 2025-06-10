@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 const Layout = ({ children }) => {
   return (
-    <SidebarProvider className="flex flex-col h-screen">
+    <SidebarProvider className="flex flex-col h-screen select-none">
       <AppSidebar />
       <Header />
       <main>{children}</main>
