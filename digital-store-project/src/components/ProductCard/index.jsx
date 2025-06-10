@@ -4,11 +4,11 @@ const ProductCard = ({ product = {}, ...props }) => {
   return (
     <div
       className={cn(
-        "bg-green-500 w-52 md:w-64 mx-auto h-fit rounded-lg overflow-hidden",
+        "mx-auto h-fit rounded-lg overflow-hidden w-full cursor-pointer",
         props.className
       )}
     >
-      <div className="bg-white h-60 flex items-center justify-center relative shadow-sm">
+      <div className="bg-white h-60 flex items-center justify-center relative shadow-md">
         {product.discount && (
           <div className="left-4 top-4 absolute bg-lime-200 text-zinc-700 text-sm font-bold py-2 px-4 rounded-full">
             {product.discount}% OFF

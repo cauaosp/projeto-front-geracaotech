@@ -5,8 +5,8 @@ const ProductList = ({ products = [], top }) => {
     <div className="px-10 py-6">
       {top}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 justify-between">
-        {products.map((product) => {
-          return <ProductCard product={product} />;
+        {products.map((product, index) => {
+          return <ProductCard product={product} key={index} />;
         })}
       </div>
     </div>

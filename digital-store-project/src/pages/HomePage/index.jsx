@@ -11,14 +11,14 @@ const HomePage = () => {
         top={
           <div className="flex justify-between px-2 mb-4">
             <div className="text-zinc-700 font-bold">Produtos em alta</div>
-            <div className="flex items-center gap-3 text-primary">
+            <a href="/productlist" className="flex items-center gap-3 text-primary">
               <div>Ver todos</div>
               <img
                 src="/right-purple.png"
                 alt="link para ver mais"
                 className="h-6"
               />
-            </div>
+            </a>
           </div>
         }
       />
