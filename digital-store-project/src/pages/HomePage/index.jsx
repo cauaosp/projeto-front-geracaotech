@@ -116,10 +116,6 @@ const HomePage = () => {
         }
       />
 
-      <div className="text-center text-primary text-7xl bg-black p-4">
-        Hello World!
-      </div>
-
       <Section
         title={
           <>
@@ -144,7 +140,7 @@ const HomePage = () => {
             />
           </div>
         }
-        className="py-8 bg-white"
+        className="py-8 bg-white mt-4"
       >
         <div className="text-lg mb-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
