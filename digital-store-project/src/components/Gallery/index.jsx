@@ -51,7 +51,7 @@ const Gallery = ({ images = [], showThumbnail, className }) => {
               <Section
                 title={
                   <>
-                    <div className="lg:text-amber-500 text-primary text-xl">
+                    <div className="md:text-amber-500 text-primary text-xl">
                       Melhores ofertas personalizadas
                     </div>
                     <div className="md:text-5xl lg:text-7xl text-stone-900">

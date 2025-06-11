@@ -6,22 +6,6 @@ import { productsData } from "@/lib/datas";
 const HomePage = () => {
   return (
     <div className="w-full bg-neutral-100">
-      <ProductList
-        products={productsData}
-        top={
-          <div className="flex justify-between px-2 mb-4">
-            <div className="text-zinc-700 font-bold">Produtos em alta</div>
-            <a href="/productlist" className="flex items-center gap-3 text-primary">
-              <div>Ver todos</div>
-              <img
-                src="/right-purple.png"
-                alt="link para ver mais"
-                className="h-6"
-              />
-            </a>
-          </div>
-        }
-      />
       <Gallery
         images={[
           {
@@ -38,6 +22,27 @@ const HomePage = () => {
           },
         ]}
       />
+
+      <ProductList
+        products={productsData}
+        top={
+          <div className="flex justify-between px-2 mb-4">
+            <div className="text-zinc-700 font-bold">Produtos em alta</div>
+            <a
+              href="/productlist"
+              className="flex items-center gap-3 text-primary"
+            >
+              <div>Ver todos</div>
+              <img
+                src="/right-purple.png"
+                alt="link para ver mais"
+                className="h-6"
+              />
+            </a>
+          </div>
+        }
+      />
+
       <div className="text-center text-primary text-7xl bg-black p-4">
         Hello World!
       </div>
