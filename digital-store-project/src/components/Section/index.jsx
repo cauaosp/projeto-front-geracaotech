@@ -6,6 +6,7 @@ const Section = ({
   titleAlign = "left",
   link,
   image,
+  customTitle,
   children,
   ...props
 }) => {
@@ -17,11 +18,14 @@ const Section = ({
       )}
     >
       {image}
-      <div className="md:w-1/2">
+      <div className={`${image && "md:w-1/2"}`}>
         <div
-          className={`flex flex-col gap-4 justify-between text-4xl text-dark-gray-2 mb-4 font-semibold ${
-            titleAlign === "center" && "items-center text-center gap-2"
-          }`}
+          className={cn(
+            `flex flex-col gap-4 justify-between text-4xl text-dark-gray-2 mb-4 font-semibold ${
+              titleAlign === "center" && "items-center text-center gap-2"
+            }`,
+            customTitle
+          )}
         >
           {title}
         </div>
