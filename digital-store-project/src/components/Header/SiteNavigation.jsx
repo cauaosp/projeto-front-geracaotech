@@ -14,7 +14,7 @@ const SiteNavigation = () => {
 
   const breadcrumbs = [
     { href: "/", label: "Home" },
-    { href: "/productlist", label: "ProductListInPage" },
+    { href: "/productlist", label: "ProductListingPage" },
     { href: "#", label: "Categorias" },
     { href: "#", label: "Meus Pedidos" },
   ];

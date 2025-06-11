@@ -20,8 +20,8 @@ const ProductCard = ({ product = {}, ...props }) => {
         <div className="text-xs font-bold text-neutral-400">{product.type}</div>
         <div className="text-zinc-700">{product.name}</div>
         <div className="flex font-bold text-sm gap-2">
-          <div className="text-neutral-400 line-through">{product.price}</div>
-          <div>{product.priceDiscount}</div>
+          <div className="text-neutral-400 line-through">${product.price}</div>
+          <div>${product.priceDiscount}</div>
         </div>
       </div>
     </div>
