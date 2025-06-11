@@ -4,7 +4,7 @@ const ProductCard = ({ product = {}, ...props }) => {
   return (
     <div
       className={cn(
-        "mx-auto h-fit rounded-lg overflow-hidden w-full cursor-pointer",
+        "mx-auto h-fit rounded-lg overflow-hidden w-full cursor-pointer hover:bg-slate-200/20 hover:shadow-md",
         props.className
       )}
     >
