@@ -32,8 +32,8 @@ const Section = ({
         </div>
         <div className={customChildren}>{children}</div>
         {link && (
-          <Button className="w-60 p-6 rounded-xl">
-            <a href={link.href} className="text-lg text-white hover:underline">
+          <Button className="w-60 p-6 rounded-xl hover:font-bold">
+            <a href={link.href} className="text-lg text-white">
               {link.text}
             </a>
           </Button>
