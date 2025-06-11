@@ -1,4 +1,3 @@
-import Section from "@/components/Section";
 import {
   Carousel,
   CarouselContent,
@@ -7,7 +6,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Gallery = ({ images = [], showThumbnail, renderItem, className }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,6 +30,17 @@ const Gallery = ({ images = [], showThumbnail, renderItem, className }) => {
   const goToIndex = (index) => {
     setCurrentIndex(index);
   };
+
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  }, 5000);
+
+  return () => clearInterval(interval);
+}, [images.length]);
+
 
   return (
     <div

@@ -57,7 +57,7 @@ const HomePage = () => {
       >
         {featuredCollection.map((product, i) => (
           <div
-            className="relative h-52 w-80 md:w-96 bg-slate-200 p-5 mx-auto flex flex-col justify-between z-10 overflow-hidden cursor-pointer"
+            className="relative h-52 w-80 md:w-96 bg-slate-200 p-5 mx-auto flex flex-col justify-between z-10 overflow-hidden cursor-pointer rounded-lg"
             key={i}
           >
             <div className="rounded-full px-2 py-1 bg-lime-200 text-zinc-700 w-24 font-bold text-center">
