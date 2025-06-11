@@ -7,6 +7,7 @@ const Section = ({
   link,
   image,
   customTitle,
+  customChildren,
   children,
   ...props
 }) => {
@@ -18,7 +19,7 @@ const Section = ({
       )}
     >
       {image}
-      <div className={`${image && "md:w-1/2"}`}>
+      <div className={`${image ? "md:w-1/2" : "w-full"}`}>
         <div
           className={cn(
             `flex flex-col gap-4 justify-between text-4xl text-dark-gray-2 mb-4 font-semibold ${
@@ -29,7 +30,7 @@ const Section = ({
         >
           {title}
         </div>
-        <div>{children}</div>
+        <div className={customChildren}>{children}</div>
         {link && (
           <Button className="w-60 p-6 rounded-xl">
             <a href={link.href} className="text-lg text-white hover:underline">
