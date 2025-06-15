@@ -28,7 +28,7 @@ const ProductListingPage = () => {
   return (
     <div className="px-4 md:px-14 py-4">
       <div className="flex flex-col justify-between text-zinc-700 my-4 max-md:text-sm items-center md:flex-row-reverse">
-        <div className="flex justify-between w-full">
+        <div className="flex justify-between w-full items-center">
           <Select>
             <SelectTrigger className="flex justify-between border border-zinc-700 p-3 rounded-lg font-bold gap-2 items-center max-md:text-xs max-md:mr-auto md:ml-auto w-fit">
               <div>Ordernar por:</div>
@@ -51,14 +51,48 @@ const ProductListingPage = () => {
                 className="h-12 bg-primary p-3 rounded-lg max-md:ml-auto md:hidden"
               />
             </SheetTrigger>
-            <SheetContent className="w-[400px] sm:w-[540px]">
-              <SheetHeader>
-                <SheetTitle>Are you absolutely sure?</SheetTitle>
-                <SheetDescription>
-                  This action cannot be undone. This will permanently delete
-                  your account and remove your data from our servers.
-                </SheetDescription>
-              </SheetHeader>
+            <SheetContent className="bg-white w-3/4 min-w-40 flex flex-col gap-2 text-zinc-700 px-8 pb-8">
+              <div className="font-bold border-b border-stone-300 py-4">
+                Filtrar por
+              </div>
+              <div className="font-bold mt-3 mb-1">Marca:</div>
+              {marca.map((m, i) => (
+                <div className="flex items-center gap-3" key={`marca-${i}`}>
+                  <Checkbox id={`marca-${i}`} className="shadow-none" />
+                  <Label htmlFor={`marca-${i}`} className="cursor-pointer">
+                    {m}
+                  </Label>
+                </div>
+              ))}
+              <div className="font-bold mt-3 mb-1">Categoria:</div>
+              {categoria.map((c, i) => (
+                <div className="flex items-center gap-3" key={`categoria-${i}`}>
+                  <Checkbox id={`categoria-${i}`} className="shadow-none" />
+                  <Label htmlFor={`categoria-${i}`} className="cursor-pointer">
+                    {c}
+                  </Label>
+                </div>
+              ))}
+              <div className="font-bold mt-3 mb-1">Gênero:</div>
+              {genero.map((g, i) => (
+                <div className="flex items-center gap-3" key={`genero-${i}`}>
+                  <Checkbox id={`genero-${i}`} className="shadow-none" />
+                  <Label htmlFor={`genero-${i}`} className="cursor-pointer">
+                    {g}
+                  </Label>
+                </div>
+              ))}
+              <div className="font-bold mt-3 mb-1">Estado:</div>
+              <RadioGroup defaultValue="Novo">
+                {estado.map((e, i) => (
+                  <div className="flex items-center gap-3" key={`estado-${i}`}>
+                    <RadioGroupItem value={e} id={`estado-${i}`} />
+                    <Label htmlFor={`estado-${i}`} className="cursor-pointer">
+                      {e}
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
             </SheetContent>
           </Sheet>
         </div>
