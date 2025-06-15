@@ -1,6 +1,9 @@
+import ProductList from "@/components/ProductListing";
+import { productsListData } from "@/lib/datas";
+
 const ProductListingPage = () => {
   return (
-    <div className="px-4 md:px-14">
+    <div className="px-4 md:px-14 py-4">
       <div className="flex justify-between text-zinc-700 my-4">
         <div className="font-bold">
           Resultados para “Tênis” -{" "}
@@ -13,9 +16,13 @@ const ProductListingPage = () => {
           <img src="/arrow-down.png" alt="seta" className="w-3" />
         </div>
       </div>
-      <div className="w-full flex h-screen justify-between">
+      <div className="flex justify-between max-h-screen">
         <div className="bg-purple-200 w-1/4">a</div>
-        <div className="bg-purple-600 w-1/2">b</div>
+        <ProductList
+          products={productsListData}
+          className="py-0 overflow-auto w-3/4"
+          customMap="grid grid-cols-1 md:grid-cols-3"
+        />
       </div>
     </div>
   );
