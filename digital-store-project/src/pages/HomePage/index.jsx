@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 
 const HomePage = () => {
   return (
-    <div className="w-full bg-slate-50">
+    <div className="w-full">
       <Gallery
         images={HomepageTenis}
         renderItem={(img) => (

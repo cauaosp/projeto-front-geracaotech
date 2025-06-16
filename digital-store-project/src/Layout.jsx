@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <SidebarProvider className="flex flex-col h-screen select-none">
       <AppSidebar />
       <Header />
-      <main>{children}</main>
+      <main className="bg-slate-50">{children}</main>
       <Footer />
     </SidebarProvider>
   );
