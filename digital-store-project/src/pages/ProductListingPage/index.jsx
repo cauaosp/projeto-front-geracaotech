@@ -51,7 +51,10 @@ const ProductListingPage = () => {
                 className="h-12 bg-primary p-3 rounded-lg max-md:ml-auto md:hidden"
               />
             </SheetTrigger>
-            <SheetContent className="bg-white w-3/4 min-w-40 flex flex-col gap-2 text-zinc-700 px-8 pb-8">
+            <SheetContent
+              className="bg-white w-3/4 min-w-40 flex flex-col gap-2 text-zinc-700 px-8 pb-8"
+              side="right"
+            >
               <div className="font-bold border-b border-stone-300 py-4">
                 Filtrar por
               </div>
