@@ -9,11 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { productsListData } from "@/lib/datas";
 
 const ProductListingPage = () => {
@@ -23,7 +19,7 @@ const ProductListingPage = () => {
   const estado = ["Novo", "Usado"];
 
   return (
-    <div className="px-4 md:px-14 py-4">
+    <div className="px-4 md:px-14 py-4 mb-8">
       <div className="flex flex-col justify-between text-zinc-700 my-4 max-md:text-sm items-center md:flex-row-reverse">
         <div className="flex justify-between w-full items-center">
           <Select>
