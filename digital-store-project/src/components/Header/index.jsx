@@ -28,7 +28,7 @@ const Header = ({ className }) => {
   const currentPath = useLocation().pathname;
 
   return (
-    <div className={cn("max-md:sticky max-md:top-0 z-50", className)}>
+    <div className={cn("max-md:sticky max-md:top-0 z-50 shadow-md", className)}>
       <div className="hidden md:block items-center py-8 px-14">
         <div className="flex justify-between items-center mb-5">
           <Logo />
