@@ -80,7 +80,7 @@ const Gallery = ({ images = [], showThumbnail, renderItem, className }) => {
         </CarouselNext>
       </Carousel>
 
-      <div className="flex gap-4 overflow-auto w-full justify-center absolute bottom-8">
+      <div className="flex gap-4 overflow-auto w-full justify-center absolute bottom-0">
         {images.map((img, index) =>
           showThumbnail ? (
             <button

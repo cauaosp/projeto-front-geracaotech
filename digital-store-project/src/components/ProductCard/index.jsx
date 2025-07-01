@@ -1,8 +1,12 @@
 import { cn } from "@/lib/utils";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product = {}, ...props }) => {
+  const navigate = useNavigate();
+
   return (
     <div
+      onClick={() => navigate("/productview")}
       className={cn(
         "mx-auto h-fit rounded-lg overflow-hidden w-full cursor-pointer hover:bg-slate-200/20 hover:shadow-md",
         props.className
